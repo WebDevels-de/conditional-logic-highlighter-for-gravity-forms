@@ -27,41 +27,41 @@ class GFCLH_Settings {
 
         $options = get_option('gfclh_options');
         ?>
-        <h3><span><i class="gform-icon gform-icon--visibility"></i> <?php _e('Conditional Logic Highlighter Settings', 'gf-conditional-logic-highlighter'); ?></span></h3>
+        <h3><span><i class="gform-icon gform-icon--visibility"></i> <?php esc_html_e('Conditional Logic Highlighter Settings', 'gf-conditional-logic-highlighter'); ?></span></h3>
         <form id="gform-settings" action="options.php" method="post">
             <?php settings_fields('gfclh_options'); ?>
             <table class="form-table">
                 <tr>
-                    <th scope="row"><?php _e('Highlight in Admin', 'gf-conditional-logic-highlighter'); ?></th>
+                    <th scope="row"><?php esc_html_e('Highlight in Admin', 'gf-conditional-logic-highlighter'); ?></th>
                     <td><input type="checkbox" name="gfclh_options[highlight_admin]" value="1" <?php checked(1, $options['highlight_admin'], true); ?> /></td>
                 </tr>
                 <tr>
                     <th scope="row">
-                        <?php _e('Highlight in Frontend', 'gf-conditional-logic-highlighter'); ?>
+                        <?php esc_html_e('Highlight in Frontend', 'gf-conditional-logic-highlighter'); ?>
                         <p class="description" style="color: #d63638;">
-                            <?php _e('Warning: This option is for debugging purposes only and is not recommended for public use.', 'gf-conditional-logic-highlighter'); ?>
+                            <?php esc_html_e('Warning: This option is for debugging purposes only and is not recommended for public use.', 'gf-conditional-logic-highlighter'); ?>
                         </p>
                     </th>
                     <td><input type="checkbox" name="gfclh_options[highlight_frontend]" value="1" <?php checked(1, $options['highlight_frontend'], true); ?> /></td>
                 </tr>
                 <tr>
                     <th scope="row">
-                        <?php _e('Admin CSS', 'gf-conditional-logic-highlighter'); ?>
-                        <p class="description"><?php _e('Applied to class:', 'gf-conditional-logic-highlighter'); ?> <code>.gfield_conditional_logic_active</code></p>
+                        <?php esc_html_e('Admin CSS', 'gf-conditional-logic-highlighter'); ?>
+                        <p class="description"><?php esc_html_e('Applied to class:', 'gf-conditional-logic-highlighter'); ?> <code>.gfield_conditional_logic_active</code></p>
                     </th>
                     <td><textarea name="gfclh_options[admin_css]" rows="3" cols="50"><?php echo esc_textarea($options['admin_css']); ?></textarea></td>
                 </tr>
                 <tr>
                     <th scope="row">
-                        <?php _e('Frontend CSS', 'gf-conditional-logic-highlighter'); ?>
-                        <p class="description"><?php _e('Applied to class:', 'gf-conditional-logic-highlighter'); ?> <code>.gfield_conditional_logic_active</code></p>
+                        <?php esc_html_e('Frontend CSS', 'gf-conditional-logic-highlighter'); ?>
+                        <p class="description"><?php esc_html_e('Applied to class:', 'gf-conditional-logic-highlighter'); ?> <code>.gfield_conditional_logic_active</code></p>
                     </th>
                     <td><textarea name="gfclh_options[frontend_css]" rows="3" cols="50"><?php echo esc_textarea($options['frontend_css']); ?></textarea></td>
                 </tr>
             </table>
             <p class="submit">
                 <button type="submit" id="gform-settings-save" name="gform-settings-save" value="save" form="gform-settings" class="primary button large">
-                    <?php _e('Save Settings', 'gf-conditional-logic-highlighter'); ?> &nbsp;→
+                    <?php esc_html_e('Save Settings', 'gf-conditional-logic-highlighter'); ?> &nbsp;→
                 </button>
             </p>
         </form>
