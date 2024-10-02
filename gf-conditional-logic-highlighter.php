@@ -10,7 +10,6 @@
  * Domain Path: /languages
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- * GitHub Plugin URI: https://github.com/WebDevels-de/gf-conditional-logic-highlighter
  */
 
 // If this file is called directly, abort.
