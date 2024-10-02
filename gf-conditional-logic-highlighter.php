@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: GF Conditional Logic Highlighter
- * Plugin URI: https://wordpress.org/plugins/gf-conditional-logic-highlighter/
+ * Plugin URI: https://github.com/WebDevels-de/gf-conditional-logic-highlighter
  * Description: Highlights fields in Gravity Forms that have Conditional Logic set and active.
  * Version: 1.0.0
  * Author: Fatih Gürsu
