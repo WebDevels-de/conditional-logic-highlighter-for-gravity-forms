@@ -34,8 +34,8 @@ function gfclh_activate() {
     $default_options = array(
         'highlight_admin' => 1,
         'highlight_frontend' => 1,
-        'admin_css' => 'background-color: #ffffcc !important; border: 1px solid #ffeb3b !important;',
-        'frontend_css' => 'background-color: #e6f3ff !important; border: 1px solid #2196f3 !important;'
+        'admin_css' => 'background-color: #ffffcc !important; border: 1px solid #ffeb3b !important; border-radius: 6px !important;',
+        'frontend_css' => 'background-color: #e6f3ff !important; border: 1px solid #2196f3 !important; border-radius: 6px !important;'
     );
     add_option('gfclh_options', $default_options);
 }
