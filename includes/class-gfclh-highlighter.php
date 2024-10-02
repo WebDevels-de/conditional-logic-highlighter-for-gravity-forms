@@ -11,8 +11,46 @@ class GFCLH_Highlighter {
     }
 
     public function enqueue_frontend_styles() {
+        // Debug: Überprüfen Sie, ob die Methode aufgerufen wird
+        error_log('GFCLH: enqueue_frontend_styles wurde aufgerufen');
+
         if (!empty($this->options['highlight_frontend'])) {
-            wp_add_inline_style('gform_css', $this->get_highlight_css('frontend'));
+            // Debug: Überprüfen Sie den Wert von highlight_frontend
+            error_log('GFCLH: highlight_frontend ist aktiviert');
+
+            $custom_css = $this->options['frontend_css'] ?? '';
+            $default_css = 'background-color: #e6f3ff !important; border: 1px solid #2196f3 !important; border-radius: 6px !important;';
+
+            // Debug: Überprüfen Sie das benutzerdefinierte CSS
+            error_log('GFCLH: Benutzerdefiniertes CSS: ' . $custom_css);
+
+            if (empty(trim($custom_css))) {
+                $css = "
+                .gfield_conditional_logic_active {
+                    {$default_css}
+                }
+                ";
+            } else {
+                $css = "
+                .gfield_conditional_logic_active {
+                    {$custom_css}
+                }
+                ";
+            }
+
+            // Debug: Überprüfen Sie das endgültige CSS
+            error_log('GFCLH: Endgültiges CSS: ' . $css);
+
+            // Fügen Sie das CSS direkt in den Header ein, anstatt wp_add_inline_style zu verwenden
+            add_action('wp_head', function() use ($css) {
+                echo "<style type='text/css'>\n{$css}\n</style>\n";
+            });
+
+            // Debug: Überprüfen Sie, ob wp_head Aktion hinzugefügt wurde
+            error_log('GFCLH: wp_head Aktion wurde hinzugefügt');
+        } else {
+            // Debug: Wenn highlight_frontend nicht aktiviert ist
+            error_log('GFCLH: highlight_frontend ist nicht aktiviert');
         }
     }
 
