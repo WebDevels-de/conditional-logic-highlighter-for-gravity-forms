@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: GF Conditional Logic Highlighter
- * Plugin URI: https://github.com/WebDevels-de/gf-conditional-logic-highlighter
- * Description: Highlights fields in Gravity Forms that have Conditional Logic set and active.
+ * Plugin Name: Conditional Logic Highlighter for Gravity Forms
+ * Plugin URI: https://wordpress.org/plugins/conditional-logic-highlighter-for-gravity-forms
+ * Description: Highlights fields in Gravity Forms that have Conditional Logic active.
  * Version: 1.0.0
  * Author: Fatih Gürsu
  * Author URI: https://webdevels.de
- * Text Domain: gf-conditional-logic-highlighter
+ * Text Domain: conditional-logic-highlighter-for-gravity-forms
  * Domain Path: /languages
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -23,8 +23,8 @@ define('GFCLH_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('GFCLH_PLUGIN_URL', plugin_dir_url(__FILE__));
 
 // Include necessary files
-require_once GFCLH_PLUGIN_DIR . 'includes/class-gfclh-settings.php';
-require_once GFCLH_PLUGIN_DIR . 'includes/class-gfclh-highlighter.php';
+require_once GFCLH_PLUGIN_DIR . 'includes/class-clhgf-settings.php';
+require_once GFCLH_PLUGIN_DIR . 'includes/class-clhgf-highlighter.php';
 
 // Hook for plugin activation
 register_activation_hook(__FILE__, 'gfclh_activate');
@@ -50,7 +50,7 @@ function gfclh_deactivate() {
 // Initialize the plugin
 function gfclh_init() {
     // Load text domain for translations
-    load_plugin_textdomain('gf-conditional-logic-highlighter', false, dirname(plugin_basename(__FILE__)) . '/languages');
+    load_plugin_textdomain('conditional-logic-highlighter-for-gravity-forms', false, dirname(plugin_basename(__FILE__)) . '/languages');
 
     // Initialize settings
     new GFCLH_Settings();

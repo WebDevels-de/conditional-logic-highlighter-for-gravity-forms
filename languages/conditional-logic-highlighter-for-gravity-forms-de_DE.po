@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GF Conditional Logic Highlighter\n"
 "POT-Creation-Date: 2023-04-15 12:00+0000\n"
-"PO-Revision-Date: 2024-10-02 01:18+0200\n"
+"PO-Revision-Date: 2024-10-06 00:55+0200\n"
 "Last-Translator: Fatih Gürsu <fg@webdevels.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -14,31 +14,31 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: includes/class-gfclh-settings.php:15
+#: includes/class-clhgf-settings.php:15
 msgid "Conditional Logic Highlighter"
-msgstr "Bedingte Logik Hervorheber"
+msgstr "Bedingte Logik Hervorhebung"
 
-#: includes/class-gfclh-settings.php:39
+#: includes/class-clhgf-settings.php:39
 msgid "Highlight in Admin"
 msgstr "Im Admin-Bereich hervorheben"
 
-#: includes/class-gfclh-settings.php:43
+#: includes/class-clhgf-settings.php:43
 msgid "Highlight in Frontend"
 msgstr "Im Frontend hervorheben"
 
-#: includes/class-gfclh-settings.php:45
+#: includes/class-clhgf-settings.php:45
 msgid "Warning: This option is for debugging purposes only and is not recommended for public use."
 msgstr "Warnung: Diese Option ist nur für Debugging-Zwecke gedacht und wird für den öffentlichen Gebrauch nicht empfohlen."
 
-#: includes/class-gfclh-settings.php:51
+#: includes/class-clhgf-settings.php:51
 msgid "Admin CSS"
 msgstr "Admin CSS"
 
-#: includes/class-gfclh-settings.php:52 includes/class-gfclh-settings.php:57
+#: includes/class-clhgf-settings.php:52 includes/class-clhgf-settings.php:57
 msgid "Applied to class:"
 msgstr "Angewendet auf Klasse:"
 
-#: includes/class-gfclh-settings.php:56
+#: includes/class-clhgf-settings.php:56
 msgid "Frontend CSS"
 msgstr "Frontend CSS"
 
