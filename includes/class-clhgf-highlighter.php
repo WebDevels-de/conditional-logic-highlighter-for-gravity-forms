@@ -43,7 +43,7 @@ class GFCLH_Highlighter {
 
             // Fügen Sie das CSS direkt in den Header ein, anstatt wp_add_inline_style zu verwenden
             add_action('wp_head', function() use ($css) {
-                echo "<style type='text/css'>\n{$css}\n</style>\n";
+                echo wp_kses_post("<style type='text/css'>\n" . $css . "\n</style>\n");
             });
 
             // Debug: Überprüfen Sie, ob wp_head Aktion hinzugefügt wurde
